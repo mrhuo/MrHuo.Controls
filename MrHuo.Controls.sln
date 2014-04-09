@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MrHuo.Controls", "MrHuo.Controls.csproj", "{668BAF79-31B2-4453-B927-62B607F9DE32}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bins", "Bins", "{23E58392-B6F2-4725-9AF0-B8F74BFF3589}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\霍小平项目\MrHuo.Controls\Bins\MrHuo.DataBase.dll = ..\..\霍小平项目\MrHuo.Controls\Bins\MrHuo.DataBase.dll
+		..\..\霍小平项目\MrHuo.Controls\Bins\MrHuo.DataBase.pdb = ..\..\霍小平项目\MrHuo.Controls\Bins\MrHuo.DataBase.pdb
+		..\..\霍小平项目\MrHuo.Controls\Bins\MrHuo.DataBase.xml = ..\..\霍小平项目\MrHuo.Controls\Bins\MrHuo.DataBase.xml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{668BAF79-31B2-4453-B927-62B607F9DE32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{668BAF79-31B2-4453-B927-62B607F9DE32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{668BAF79-31B2-4453-B927-62B607F9DE32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{668BAF79-31B2-4453-B927-62B607F9DE32}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

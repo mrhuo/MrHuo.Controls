@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SMTPConfig>
+  <SMTPServer>smtp.qq.com</SMTPServer>
+  <UserName>491217650@qq.com</UserName>
+  <UserPassword>******</UserPassword>
+  <Port>25</Port>
+  <EnableSsl>false</EnableSsl>
+  <Encoding>UTF-8</Encoding>
+  <DefaultSender>491217650@qq.com</DefaultSender>
+  <DefaultSenderName>[MrHuoStudio]</DefaultSenderName>
+  <IsBodyHtml>true</IsBodyHtml>
+  <IsAsyncSend>true</IsAsyncSend>
+</SMTPConfig>

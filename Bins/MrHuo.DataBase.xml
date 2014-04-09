@@ -1,0 +1,377 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MrHuo.DataBase</name>
+    </assembly>
+    <members>
+        <member name="T:MrHuo.DataBase.Column">
+            <summary>
+            表示数据表结构的属性类
+            </summary>
+        </member>
+        <member name="P:MrHuo.DataBase.Column.ColumnName">
+            <summary>
+            获取或者设置一个值，该值表示表列名
+            </summary>
+        </member>
+        <member name="P:MrHuo.DataBase.Column.ColumnType">
+            <summary>
+            获取或者设置一个值，该值表示列类型
+            </summary>
+        </member>
+        <member name="P:MrHuo.DataBase.Column.ColumnLength">
+            <summary>
+            获取或者设置一个值，该值表示列长度
+            </summary>
+        </member>
+        <member name="P:MrHuo.DataBase.Column.ColumnDescription">
+            <summary>
+            获取或者设置一个值，该值表示列描述
+            </summary>
+        </member>
+        <member name="P:MrHuo.DataBase.Column.DefaultValue">
+            <summary>
+            获取或者设置一个值，该值表示列默认值
+            </summary>
+        </member>
+        <member name="P:MrHuo.DataBase.Column.IsIdentity">
+            <summary>
+            获取或者设置一个值，该值表示列是否标示列
+            </summary>
+        </member>
+        <member name="P:MrHuo.DataBase.Column.IsPrimaryKey">
+            <summary>
+            获取或者设置一个值，该值表示列是否为主键
+            </summary>
+        </member>
+        <member name="P:MrHuo.DataBase.Column.IsNullable">
+            <summary>
+            获取或者设置一个值，该值表示列是否可以为空
+            </summary>
+        </member>
+        <member name="T:MrHuo.DataBase.DataBaseHelper">
+            <summary>
+            数据库助手
+            </summary>
+        </member>
+        <member name="M:MrHuo.DataBase.DataBaseHelper.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="connString">数据库连接字符串</param>
+        </member>
+        <member name="M:MrHuo.DataBase.DataBaseHelper.#ctor(System.Data.SqlClient.SqlConnection)">
+            <summary>
+            构造函数重载，以SqlConnection初始化DataBaseHelper势力
+            </summary>
+            <param name="conn">SqlConnection</param>
+        </member>
+        <member name="M:MrHuo.DataBase.DataBaseHelper.GetTables">
+            <summary>
+            获取数据库中所有用户数据表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MrHuo.DataBase.DataBaseHelper.GetProcedures">
+            <summary>
+            获取数据库中所有用户存储过程
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MrHuo.DataBase.DataBaseHelper.GetFunctions">
+            <summary>
+            获取数据库中所有函数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MrHuo.DataBase.DataBaseHelper.GetViews">
+            <summary>
+            获取数据库中所有视图
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MrHuo.DataBase.DataBaseHelper.GetForeignKeys">
+            <summary>
+            获取数据库中所有外键
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MrHuo.DataBase.DataBaseHelper.GetColumnsByTableName(System.String)">
+            <summary>
+            获取指定表的所有列
+            </summary>
+            <param name="TableName">表名</param>
+            <returns></returns>
+        </member>
+        <member name="M:MrHuo.DataBase.DataBaseHelper.GetObjectContentByName(System.String)">
+            <summary>
+            获取指定对象的数据库脚本
+            </summary>
+            <param name="name">数据库对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:MrHuo.DataBase.DataBaseHelper.QueryDatabaseExists(System.String)">
+            <summary>
+            查询指定的数据库是否存在
+            </summary>
+            <param name="dbName">数据库名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:MrHuo.DataBase.DataBaseHelper.QueryTableExist(System.String)">
+            <summary>
+            查询指定的表是否存在
+            </summary>
+            <param name="tableName">表名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:MrHuo.DataBase.DataBaseHelper.ExcuteSql(System.String)">
+            <summary>
+            执行指定的SQL语句
+            </summary>
+            <param name="sql"></param>
+        </member>
+        <member name="M:MrHuo.DataBase.DataBaseHelper.ExceuteProcedures(System.String,System.Collections.Generic.List{System.Data.SqlClient.SqlParameter})">
+            <summary>
+            执行存储过程
+            </summary>
+            <param name="procName">存储过程名称</param>
+            <param name="parmas">存储过程参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:MrHuo.DataBase.DataBaseHelper.ChangeDatabase(System.String)">
+            <summary>
+            切换数据库
+            </summary>
+            <param name="databaseName"></param>
+        </member>
+        <member name="M:MrHuo.DataBase.DataBaseHelper.DropTable(System.String)">
+            <summary>
+            删除表
+            </summary>
+            <param name="tableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MrHuo.DataBase.DataBaseHelper.DropDatabase(System.String)">
+            <summary>
+            删除数据库
+            </summary>
+            <param name="dataBaseName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MrHuo.DataBase.DataBaseHelper.CreateDatabase(System.String)">
+            <summary>
+            创建数据库
+            </summary>
+            <param name="dataBaseName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MrHuo.DataBase.DataBaseHelper.Dispose">
+            <summary>
+            释放系统资源
+            </summary>
+        </member>
+        <member name="P:MrHuo.DataBase.DataBaseHelper.DataBaseName">
+            <summary>
+            获取一个值，该值表示数据库名称
+            </summary>
+        </member>
+        <member name="T:MrHuo.DataBase.Extensions">
+            <summary>
+            扩展方法
+            </summary>
+        </member>
+        <member name="M:MrHuo.DataBase.Extensions.IsNullOrEmpty(System.Object)">
+            <summary>
+            扩展方法，用于判断一个Object对象是否是Null或Empty
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MrHuo.DataBase.Extensions.ToList``1(System.Data.DataTable)">
+            <summary>
+            根据DataTable内容获取指定属性类的属性List
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="dtSource"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MrHuo.DataBase.Extensions.ToModel``1(System.Data.DataTable)">
+            <summary>
+            根据DataRow内容获取指定属性类
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="dtSource"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MrHuo.DataBase.ForeignKey">
+            <summary>
+            表示数据库外间关系的属性类
+            </summary>
+        </member>
+        <member name="P:MrHuo.DataBase.ForeignKey.ForeignKeyName">
+            <summary>
+            获取或者设置一个值，该值表示主键名称
+            </summary>
+        </member>
+        <member name="P:MrHuo.DataBase.ForeignKey.SourceTable">
+            <summary>
+            获取或者设置一个值，该值表示主键所在表
+            </summary>
+        </member>
+        <member name="P:MrHuo.DataBase.ForeignKey.SourceColumn">
+            <summary>
+            获取或者设置一个值，该值表示主键列名称
+            </summary>
+        </member>
+        <member name="P:MrHuo.DataBase.ForeignKey.ReferencedTable">
+            <summary>
+            获取或者设置一个值，该值表示引用的表名
+            </summary>
+        </member>
+        <member name="P:MrHuo.DataBase.ForeignKey.ReferencedColumn">
+            <summary>
+            获取或者设置一个值，该值表示引用的列名
+            </summary>
+        </member>
+        <member name="T:MrHuo.DataBase.Function">
+            <summary>
+            标示数据库中函数的属性类
+            </summary>
+        </member>
+        <member name="P:MrHuo.DataBase.Function.FunctionName">
+            <summary>
+            获取或者设置一个值，该值表示函数名称
+            </summary>
+        </member>
+        <member name="P:MrHuo.DataBase.Function.FunctionDescription">
+            <summary>
+            获取或者设置一个值，该值表示函数描述
+            </summary>
+        </member>
+        <member name="P:MrHuo.DataBase.Function.FunctionType">
+            <summary>
+            获取或者设置一个值，该值表示函数类型
+            </summary>
+        </member>
+        <member name="P:MrHuo.DataBase.Function.CreateDate">
+            <summary>
+            获取或者设置一个值，该值表示函数创建日期
+            </summary>
+        </member>
+        <member name="T:MrHuo.DataBase.Procedure">
+            <summary>
+            表示数据库中存储过程的属性类
+            </summary>
+        </member>
+        <member name="P:MrHuo.DataBase.Procedure.ProcedureName">
+            <summary>
+            获取或者设置一个值，该值表示存储过程名称
+            </summary>
+        </member>
+        <member name="P:MrHuo.DataBase.Procedure.ProcedureDescription">
+            <summary>
+            获取或者设置一个值，该值表示存储过程描述
+            </summary>
+        </member>
+        <member name="P:MrHuo.DataBase.Procedure.CreateDate">
+            <summary>
+            获取或者设置一个值，该值表示存储过程创建日期
+            </summary>
+        </member>
+        <member name="T:MrHuo.DataBase.SQL">
+            <summary>
+            常用SQL
+            </summary>
+        </member>
+        <member name="F:MrHuo.DataBase.SQL.QueryTables">
+            <summary>
+            用于查询所有数据表数据的SQL
+            </summary>
+        </member>
+        <member name="F:MrHuo.DataBase.SQL.QueryProcedures">
+            <summary>
+            用于查询所有存储过程的SQL
+            </summary>
+        </member>
+        <member name="F:MrHuo.DataBase.SQL.QueryViews">
+            <summary>
+            用于查询所有视图的SQL
+            </summary>
+        </member>
+        <member name="F:MrHuo.DataBase.SQL.QueryFunctions">
+            <summary>
+            用于查询所有函数的SQL
+            </summary>
+        </member>
+        <member name="F:MrHuo.DataBase.SQL.QueryTableByName">
+            <summary>
+            用于查询数据表属性
+            </summary>
+        </member>
+        <member name="F:MrHuo.DataBase.SQL.QueryForeignKeys">
+            <summary>
+            用于查询所有外键的SQL
+            </summary>
+        </member>
+        <member name="F:MrHuo.DataBase.SQL.QueryTableExists">
+            <summary>
+            用于查询表是否存在的QL
+            </summary>
+        </member>
+        <member name="F:MrHuo.DataBase.SQL.QueryDatabaseExists">
+            <summary>
+            用于查询数据库是否存在的QL
+            </summary>
+        </member>
+        <member name="F:MrHuo.DataBase.SQL.DropTable">
+            <summary>
+            用于删除表的SQL
+            </summary>
+        </member>
+        <member name="F:MrHuo.DataBase.SQL.DropDatabase">
+            <summary>
+            用于删除数据库的SQL
+            </summary>
+        </member>
+        <member name="F:MrHuo.DataBase.SQL.CreateDatabase">
+            <summary>
+            用户创建数据的SQL
+            </summary>
+        </member>
+        <member name="T:MrHuo.DataBase.Table">
+            <summary>
+            表示数据库中表的属性类
+            </summary>
+        </member>
+        <member name="P:MrHuo.DataBase.Table.TableName">
+            <summary>
+            获取或者设置一个值，该值表示表名
+            </summary>
+        </member>
+        <member name="P:MrHuo.DataBase.Table.TableDescription">
+            <summary>
+            获取或者设置一个值，该值表示表的描述
+            </summary>
+        </member>
+        <member name="P:MrHuo.DataBase.Table.CreateDate">
+            <summary>
+            获取或者设置一个值，该值表示表的创建日期
+            </summary>
+        </member>
+        <member name="T:MrHuo.DataBase.View">
+            <summary>
+            表示数据库中视图的属性类
+            </summary>
+        </member>
+        <member name="P:MrHuo.DataBase.View.ViewName">
+            <summary>
+            获取或者设置一个值，该值表示视图名称
+            </summary>
+        </member>
+        <member name="P:MrHuo.DataBase.View.CreateDate">
+            <summary>
+            获取或者设置一个值，该值表示视图创建日期
+            </summary>
+        </member>
+    </members>
+</doc>

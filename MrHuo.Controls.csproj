@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{668BAF79-31B2-4453-B927-62B607F9DE32}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MrHuo.Controls</RootNamespace>
+    <AssemblyName>MrHuo.Controls</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\MrHuo.Controls.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>MrHuo.Controls.Key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MrHuo.DataBase">
+      <HintPath>Bins\MrHuo.DataBase.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Configs\ConfigBase.cs" />
+    <Compile Include="Email\EmailSender.cs" />
+    <Compile Include="Email\Events.cs" />
+    <Compile Include="Email\SMTPConfig.cs" />
+    <Compile Include="Check.cs" />
+    <Compile Include="Gather\Gather.cs" />
+    <Compile Include="Importer\DataImport.cs" />
+    <Compile Include="Importer\ImportArgument.cs" />
+    <Compile Include="Importer\ImportFileType.cs" />
+    <Compile Include="Importer\ImportingEventArgs.cs" />
+    <Compile Include="Logger\DataBaseLogger.cs" />
+    <Compile Include="Logger\FileLogger.cs" />
+    <Compile Include="Logger\Logger.cs" />
+    <Compile Include="Logger\LogConfig.cs" />
+    <Compile Include="Logger\Enums.cs" />
+    <Compile Include="MVC\AuthorizationAttribute.cs" />
+    <Compile Include="MVC\AuthorizationConfig.cs" />
+    <Compile Include="MVC\PagerExtension.cs" />
+    <Compile Include="MVC\PagerOptions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RestResult.cs" />
+    <Compile Include="Resources\RS.cs" />
+    <Compile Include="SMS\SMSConfig.cs" />
+    <Compile Include="SMS\SMSSender.cs" />
+    <Compile Include="WebControls\RepeaterEx.cs" />
+    <Compile Include="WebControls\RepeaterExPager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Resource.en-US.resx" />
+    <EmbeddedResource Include="Resources\Resource.zh-Hans.resx" />
+    <EmbeddedResource Include="Resources\Resource.zh-Hant.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MrHuo.Controls.Key.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Email\SMTPConfig.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Logger\LogConfig.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="MVC\AuthorizationConfig.xml" />
+    <Content Include="SMS\SMSConfig.xml" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

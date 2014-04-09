@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AuthorizationConfig>
+  <AuthUrl>/User/Login</AuthUrl>
+  <ReturnUrl>True</ReturnUrl>
+  <AuthSaveKey>LoginedUser</AuthSaveKey>
+  <AuthSaveType>Session</AuthSaveType>
+</AuthorizationConfig>

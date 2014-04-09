@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SMSConfig>
+  <UrlFormat><![CDATA[http://gbk.sms.webchinese.cn/?Uid={User}&Key={Key}&smsMob={Mobile}&smsText={Content}]]></UrlFormat>
+  <User>admin</User>
+  <Key>123456</Key>
+</SMSConfig>

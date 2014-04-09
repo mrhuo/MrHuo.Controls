@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LogConfig>
+  <WarningMode>OFF</WarningMode>
+  <!--Warning Mode OFF/Email/SMS-->
+  <WarningEmail>admin@mrhuo.com</WarningEmail>
+  <!--Warning Email-->
+  <WarningSMSReciver>15101322663</WarningSMSReciver>
+  <!--Warning SMS Reciver Phone Number-->
+  <LogType>DataBase</LogType>
+  <!--ONLY "File" Or "DataBase"-->
+  <SavePath>C:/Logs/</SavePath>
+  <!--Log File Save Path-->
+  <DBConnectionString>SERVER=(local);USER=sa;PASSWORD=1986929;</DBConnectionString>
+  <!--Log DataBase Connection String-->
+  <DBName>DB_EventLogs</DBName>
+  <!--The DataBase For Store EventLog-->
+  <SplitTableByDays>1</SplitTableByDays>
+  <!--Split Table By This Days-->
+  <CurrentTableName></CurrentTableName>
+  <!--Don't Modify This Feild-->
+</LogConfig>
